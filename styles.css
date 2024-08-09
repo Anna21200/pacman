@@ -1,0 +1,61 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: black;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+#game {
+    text-align: center;
+}
+
+#score {
+    margin-bottom: 10px;
+    font-size: 24px;
+}
+
+#grid {
+    display: grid;
+    grid-template-columns: repeat(28, 20px);
+    grid-template-rows: repeat(31, 20px);
+    gap: 2px;
+}
+
+.square {
+    width: 20px;
+    height: 20px;
+    background-color: #000;
+}
+
+.wall {
+    background-color: #1c1c1c;
+}
+
+.pac-dot {
+    background-color: #f5f5f5;
+    border-radius: 50%;
+    width: 8px;
+    height: 8px;
+    margin: auto;
+}
+
+.pac-man {
+    background-color: yellow;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pac-man::before {
+    content: '';
+    width: 20px;
+    height: 20px;
+    clip-path: polygon(100% 50%, 0% 0%, 0% 100%);
+    background-color: yellow;
+}
+

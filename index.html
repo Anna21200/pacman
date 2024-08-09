@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pac-Man Animado</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: black;
+        }
+
+        .pacman {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 50px;
+            height: 50px;
+            background-color: yellow;
+            clip-path: polygon(100% 50%, 0% 0%, 0% 100%);
+            animation: movePacman 2s linear infinite;
+        }
+
+        @keyframes movePacman {
+            0% {
+                transform: translateX(0) rotate(0deg);
+            }
+            50% {
+                transform: translateX(90vw) rotate(180deg);
+            }
+            100% {
+                transform: translateX(0) rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="pacman"></div>
+</body>
+</html>
